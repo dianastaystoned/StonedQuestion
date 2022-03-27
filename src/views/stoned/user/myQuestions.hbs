@@ -1,0 +1,53 @@
+{{!-- <div class="home-content">
+    <h1 class="text-center">All my questions</h1> <br><br>
+    <div class="overview-boxes">
+    {{#each questions}}
+      <div class="box">
+        <div class="right-side">
+            <div class="number">{{title}}</div>
+            <div class="indicator">
+              <span class="text">{{description}}</span>
+            </div>
+        </div><br><br>
+        <a href="/stoned/delete/{{id}}"><i class='bx bxs-trash alt cart four'></i></a>
+      </div>
+    {{/each}}
+    </div>
+    <div class="overview-boxes text-center">
+      <div class="box">
+        <div class="right-side">
+            <div class="number">Make one...</div>
+        </div>
+        <a href="/stoned/makeaquestion"><i class='bx bx-plus cart two'></i></a>
+      </div>
+    </div>
+</div> --}}
+
+<div class="containerr">{{#if (isData questions)}}
+  <h1 class="text-center">All my questions</h1> <br><br>
+  
+  {{#each questions}}
+  <div class="wrapper">
+    <button class="toggle">
+      {{title}}
+      <i class="fas fa-plus icon"></i>
+      <a href="/stoned/delete/{{id}}"><i class='fas fa-trash'></i></a>
+    </button>
+    <div class="content">
+      <p>{{description}}</p>
+      <p>Category: {{category_name}}</p>
+    </div>
+  </div>
+  {{/each}}
+  
+  <div class="wrapper">
+    <a href="/stoned/makeaquestion">
+      <button class="toggle">
+        <h3>MAKE ONE</h3>
+        <i class='fas fa-plus icon'></i>
+      </button>
+      <div class="content">
+      </div>
+    </a>
+  </div>{{/if}}
+</div>

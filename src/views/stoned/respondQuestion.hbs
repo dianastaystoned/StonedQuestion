@@ -1,0 +1,40 @@
+<br><br><br><br><br><br><br><br><br><br><div class="containerr">  
+    
+    <div class="wrapper">
+        {{#each answer}}
+        <div class="toggle">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="toggle">
+            <p>{{description}}</p>
+        </div>
+        <div class="toggle">
+            <p>Category: {{category_name}}</p>
+        </div>
+        <div class="toggle">
+            <p>Asked: {{username}}</p>
+        </div>
+        {{/each}}
+        {{#each question}}
+        <div class="toggle">
+            <p>Answer: {{desc_answer}}</p>
+            <p>Answered by: {{username}}</p>
+        </div>
+        {{/each}}
+    </div>
+  <div class="wrapper">
+        <div class="toggle">
+            <h1>Give us an answer</h1>
+        </div>
+        <form action="/stoned/respondaquestion/{{q.id}}" method="POST">
+            <div class="form-group">
+                <input type="text" name="desc_answer" placeholder="Put your answer..." class="form-control" required autofocus>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-block">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+</div> 

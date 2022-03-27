@@ -1,0 +1,35 @@
+{{!-- <div class="home-content">
+    <h1 class="text-center">All my answers</h1>
+    <div class="overview-boxes">
+    {{#each answers}}
+      <div class="box">
+        <div class="right-side">
+            <div class="box-topic">{{desc_answer}}</div>
+            <div class="number">{{title}}</div>
+            <div class="indicator">
+              <span class="text">{{desc_answer}}</span>
+            </div>
+            <div class="indicator">
+              <span class="text">Question: {{question_id}}</span>
+            </div>
+        </div><br><br>
+      </div>
+    {{/each}}
+    </div>
+</div> --}}
+
+<div class="containerr">
+  <h1 class="text-center">All my answers</h1> <br><br>
+  {{#each answers}}
+  <div class="wrapper">
+    <button class="toggle">
+      {{title}}
+      <i class="fas fa-plus icon"></i>
+    </button>
+    <div class="content">
+      <p>The problem: {{description}}</p>
+      <p>Your answer: {{desc_answer}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>

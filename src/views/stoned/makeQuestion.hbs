@@ -1,0 +1,38 @@
+<div class="home-content">
+    <h1 class="text-center">Agrega tus laboratorios</h1><br><br>
+    <div class="overview-boxes">
+      <div class="box col-md-12 mx-auto">
+        <div class="right-side">
+            <form action="/stoned/makeaquestion" method="POST">
+                <div class="form-group">
+                    <input type="text" name="title" placeholder="Title" class="form-control" required autofocus>
+                </div>
+                <div class="form-group">
+                    <textarea name="description" placeholder="Description" class="form-control" required cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="image" placeholder="Image URL" class="form-control">
+                </div>
+                <div class="form-group" required>
+                    <label for="category_id">Category</label>
+                    <select name="category_id"  class="form-control">
+                        <option value="1">MySQL</option>
+                        <option value="2">SQL</option>
+                        <option value="3">Node JS</option>
+                        <option value="4">Visual Studio</option>
+                        <option value="5">Azure</option>
+                        <option value="6">Java</option>
+                        <option value="7">React JS</option>
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+ 
