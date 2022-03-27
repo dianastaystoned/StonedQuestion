@@ -11,7 +11,7 @@ module.exports = {
         if(req.isAuthenticated()){
             return next();
         }
-        req.flash('message','Inicia sesión para poder acceder.') 
+        req.flash('success','Please, singn in or sign up, then we give u all the access.') 
         res.redirect('/signin')
     }
 };
